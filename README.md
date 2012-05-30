@@ -28,3 +28,17 @@ We see them laid out in the following manor:
 
 ![System Design](http://i.imgur.com/RW6Ol.jpg)
 
+Get Started
+-----------
+###Check out the project
+```
+$ git clone git@github.com:No9/coolamber.git
+$ cd coolamber 
+```
+###Run
+```
+$ node app.js
+```
+###Browse 
+In the your favourite web browser go to [localhost:8080](http://localhost:8080)
+You will find a tutorial on that page. 
