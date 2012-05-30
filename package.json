@@ -1,0 +1,29 @@
+{
+  "name": "coolamber",
+  "description": "An modular application container for node.js",
+  "tags": [
+    "portal",
+    "SPA",
+    "micro app",
+    "IoC"
+  ],
+  "version": "0.0.1",
+  "author": {
+    "name": "Anton Whalley",
+    "email": "anton.whalley@vodafone.ie"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/No9/coolamber.git"
+  },
+  "bugs": {
+    "url": "https://github.com/No9/coolamber/issues"
+  },
+  "dependencies": {
+  },
+  "devDependencies" : {
+  },
+    "scripts" : {
+        "test" : "node test/host.js"
+  }
+}
