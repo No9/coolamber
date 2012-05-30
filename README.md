@@ -1,5 +1,6 @@
 coolamber
 =========
+[![build status](https://secure.travis-ci.org/No9/coolamber.png)](http://travis-ci.org/No9/coolamber)
 Introduction
 ------------
 coolamber is an Multi-Micro Application container that enables rapid development and deployment of loosely coupled web applications.  
