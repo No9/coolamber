@@ -11,9 +11,9 @@ A coolamber container is a reference implementation of how to integrate the new 
 
 We believe the design maintains the flexibility and managability inherent in SPAs while providing the benefit of sharing certain cross cutting concerns to improve the development and deployment story. 
 
-Layout
-------
-From an general application architecture perspective coolamber provides the following infrastructure. 
+Application Layout
+------------------
+From a general application architecture perspective coolamber provides the following infrastructure: 
 
 - Remote, Managed and Static Application Hosting
 - Application Partitioning For Managability
