@@ -1,9 +1,9 @@
 var assert = require('assert');
 
-var this = false;
-var that = false;
+var dis = false;
+var dat = false;
 
-assert.equal(this, that);
+assert.equal(dis, dat);
 
 console.log('Tests Completed');
 
