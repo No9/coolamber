@@ -1,0 +1,11 @@
+{
+  "author": "Number 9 <antonwhalley@vodafone.ie>",
+  "name": "home",
+  "displaytext" : "Home",
+  "description": "Landing Pages.",
+  "version": "0.0.1",
+  "domain" : "localhost",
+  "homepage": "https://github.com/no9/coolamber/home",
+  "applicationtype": "static",
+  "port": 1337
+}
