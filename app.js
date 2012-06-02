@@ -13,53 +13,37 @@ var proxyoptions = {
 
 var proxyport = 9000;
 process.setMaxListeners(0);
-
-
 loadhtmlactions()
 loadapps()
+
 function loadhtmlactions(){
 
 	var actionslist = fs.readdirSync(actionsdir);
+
 	for (var i = actionslist.length - 1; i >= 0; i--) {
 		var filecontent = fs.readFileSync(actionsdir + "/" + actionslist[i], 'utf8').split("{{html}}");
 		var removedext = actionslist[i].split(".");
-		//var querylist = removedext[0].split("_"); 
-		var simpleaction = {};
-		simpleaction.query = removedext[0];
+		createaction(removedext[0], filecontent[0].toString(), filecontent[1].toString());
+	}
+}
 
-		simpleaction.func = function (node) {
-			node.replace(function (html) {
-				return filecontent[0] + html + filecontent[1]; 
+function createaction(query, before, after)
+{
+	(function(_query, _before, _after) {
+		var simpleaction = {};
+		simpleaction.query = _query;
+
+		simpleaction.func = function(node) {
+			node.update(function (html) {
+				return _before + html + _after; 
 			});
 		};
 		actions.push(simpleaction);
-	}
+	})(query, before, after);
 }
-	// fs.readdir(actionsdir, function (err, list) {
-	// 	if (err)
- //          return action(err);
- //      list.forEach(function (file) {
- //          var path = actionsdir + "/" + file;
- //          fs.stat(path, function (err, stat) {
- //          		console.log(path);
-	// 		    var simpleaction = {};
-	// 			simpleaction.query = '.b';
-	// 			simpleaction.func = function (node) {
-	// 		    	node.replace(function (html) {
-	// 		        	return '<div>+ Trumpet</div>';
-	// 		        });
-	// 		    } 
-	// 			actions.push(simpleaction);
- //          });
- //      });
-	// });
-
 
 function loadapps()
 {
-	
-	
-
 	var harmon = require('harmon').harmon(actions) 
 	proxyoptions = { router: 'table.json' };
 	require('./lib/proxyserver.js').generate(proxyoptions, harmon);
