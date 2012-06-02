@@ -11,6 +11,9 @@ var proxyport = 9000;
 
 function loadapps()
 {
+	proxyoptions = { router: 'table.json' };
+	require('./lib/proxyserver.js').generate(proxyoptions);
+
     fs.readdir(dir, function (err, list) {
         // Return the error if sometvar request = require('request');hing went wrong
         if (err)
@@ -49,14 +52,9 @@ function loadapps()
 			   		console.log("ERROR: Unknown applicationtype " + config.applicationtype + " in " + config.name)
 			   }
 			   
-			   if(config.name == "home"){
-				 proxyoptions.router["localhost/"] = config.domain + ":" + config.port;
-			   }
-				proxyoptions.router["localhost/" + config.name] =  config.domain + ":" + config.port;
-			   
-			   
-			  /**/
-              app.init(function (err){
+				require('./lib/proxyserver.js').writeroute("localhost/" + config.name, config.domain + ":" + config.port);
+				
+			   app.init(function (err){
                 if(err){
                     console.log(err);
                 }
@@ -64,7 +62,6 @@ function loadapps()
             }
           });
         });
-		require('./lib/proxyserver.js').generate(proxyoptions);
     });
 }
 

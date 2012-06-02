@@ -1,4 +1,4 @@
-coolamber
+coolamber 
 =========
 [![build status](https://secure.travis-ci.org/No9/coolamber.png)](http://travis-ci.org/No9/coolamber)
 Introduction
