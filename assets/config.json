@@ -1,0 +1,11 @@
+{
+  "author": "Number 9 <antonwhalley@vodafone.ie>",
+  "name": "assets",
+  "displaytext" : "Assets",
+  "description": "Assets For Application",
+  "version": "0.0.1",
+  "domain" : "localhost",
+  "homepage": "https://github.com/no9/coolamber/home",
+  "applicationtype": "static",
+  "port": 1337
+}

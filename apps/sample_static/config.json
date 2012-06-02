@@ -1,0 +1,11 @@
+{
+  "author": "Number 9 <antonwhalley@vodafone.ie>",
+  "name": "sample_static",
+  "displaytext" : "Static",
+  "description": "sample static.",
+  "version": "0.0.1",
+  "domain" : "localhost",
+  "homepage": "https://github.com/no9/coolamber/apps/sample_static",
+  "applicationtype": "static",
+  "port": 7000
+}
