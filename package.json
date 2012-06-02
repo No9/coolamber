@@ -20,6 +20,10 @@
     "url": "https://github.com/No9/coolamber/issues"
   },
   "dependencies": {
+    "http-proxy": "0.8.0",
+    "harmon": "0.0.2",
+    "broadway" : "0.2.0",
+    "http-server" : "0.4.1"
   },
   "devDependencies" : {
   },
