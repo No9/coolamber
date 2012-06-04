@@ -13,8 +13,21 @@ var proxyoptions = {
 
 var proxyport = 9000;
 process.setMaxListeners(0);
+
 loadhtmlactions()
+loadassetserver(); 
 loadapps()
+
+function loadassetserver()
+{
+	var config = {};
+	config.name = 'assets';
+	config.port = 7001;
+	config.domain = 'localhost';
+
+	require('./lib/staticserver.js').generate("./", config);
+	require('./lib/proxyserver.js').writeroute("localhost/" + config.name, config.domain + ":" + config.port);
+}
 
 function loadhtmlactions(){
 
@@ -75,7 +88,7 @@ function loadapps()
 			  }
 
 			  if(config.applicationtype == "static"){
-					require('./lib/staticserver.js').generate(config);
+					require('./lib/staticserver.js').generate("./apps/", config);
 			  }else if (config.applicationtype == "managed"){
 			   		app.use(require(path + '/app'));
 			   }else if(config.applicationtype == "remote"){
