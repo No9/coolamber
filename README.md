@@ -41,5 +41,5 @@ $ cd coolamber
 $ node app.js
 ```
 ###Browse 
-In the your favourite web browser go to [localhost:8080](http://localhost:8080)
+In the your favourite web browser go to [localhost:9000/home](http://localhost:9000/home)
 You will find a tutorial on that page. 

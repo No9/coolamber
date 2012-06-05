@@ -26,7 +26,7 @@ function loadassetserver()
 	config.domain = 'localhost';
 
 	require('./lib/staticserver.js').generate("./", config);
-	require('./lib/proxyserver.js').writeroute("localhost/" + config.name, config.domain + ":" + config.port);
+	require('./lib/appproxy.js').writeroute("localhost/" + config.name, config.domain + ":" + config.port);
 }
 
 function loadhtmlactions(){
@@ -59,7 +59,7 @@ function loadapps()
 {
 	var harmon = require('harmon').harmon(actions) 
 	proxyoptions = { router: 'table.json' };
-	require('./lib/proxyserver.js').generate(proxyoptions, harmon);
+	require('./lib/appproxy.js').generate(proxyoptions, harmon);
 
     fs.readdir(dir, function (err, list) {
         // Return the error if sometvar request = require('request');hing went wrong
@@ -97,7 +97,7 @@ function loadapps()
 			   		console.log("ERROR: Unknown applicationtype " + config.applicationtype + " in " + config.name)
 			   }
 			   
-				require('./lib/proxyserver.js').writeroute("localhost/" + config.name, config.domain + ":" + config.port);
+				require('./lib/appproxy.js').writeroute("localhost/" + config.name, config.domain + ":" + config.port);
 				
 			   app.init(function (err){
                 if(err){
