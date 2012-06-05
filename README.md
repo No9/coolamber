@@ -10,9 +10,9 @@ It is implemented in javascript and runs on [node.js](http://nodejs.org/) and a 
 
 A coolamber container is a reference implementation of how to integrate the new breed of single page applications (SPA) into a cohesive orchestration of application services.  
 
-We believe the design maintains the flexibility and managability inherent in SPAs while providing the benefit of sharing certain cross cutting concerns to improve the development and deployment story. 
+The design intends to maintain the flexibility and managability inherent in SPAs while providing the benefit of sharing certain cross cutting concerns to improve the development and deployment story. 
 
-Application Layout
+Features
 ------------------
 From a general application architecture perspective coolamber provides the following infrastructure: 
 
